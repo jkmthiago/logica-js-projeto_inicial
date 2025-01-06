@@ -13,9 +13,25 @@
 </head>
 
 <body>
-    <div id="gameOn">
+    <div id="range" class="container4"">
+        <div id="welcome">
+            <h1 style="text-align: center;">Bem Vindo ao Jogo do número aleatório</h1>
+            <h2 style="text-align: center;" id="subtitle"">O que você prefere</h2><br>
+        </div>
+        <div id="buttons" style="display: flex;flex-direction: column;align-items: center;">
+            <button type="button" class="container__botao_azul" onclick="setSecretNumberRange('rangeFrom')">Escolher o Intervalo do Número Secreto</button><br>
+            <button type="button" class="container__botao_verde" onclick="setSecretNumberRange('notToRange')">Deixar a máquina escolher por mim</button>
+        </div>
+        <div id="choseARange" style="display: none;" class="container2">
+            <label for="userRangeChoice">Indique um número para Finalizar o Intervalo iniciado em 0:</label>
+            <input id="userRangeChoice" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" id="attempt">
+            <button type="button" onclick="setSecretNumberRange('startTheGame')">Iniciar o Jogo</button>
+            <button type="button" onclick="setSecretNumberRange('returnToButtons')"Voltar</button>
+        </div>
+    </div>
+    <div id="gameOn" style="display: none;">
         <div id="attempts" class="container2">
-            <p>Escolha um número entre 0 a 100</p><br>
+            <p id="secretNumberRangeInfo"></p><br>
             <input onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" id="attempt" style="color: black; width: 100%; border-radius: 5px; height: 30px; font-size: 23px;">
             <button type="button" class="container2__botao" onclick="attemptDone()">Enviar</button>
         </div>
@@ -33,7 +49,8 @@
                 <img src="./img/trophy.png" alt="ícone de um troféu" />
                  <div class="container__texto">
                     <h1>Você <span class="container__texto-azul">acertou!</span></h1>
-                    <h2>Você descobriu o número secreto!</h2>
+                    <h2>Você descobriu o número secreto!</h2><br>
+                    <button onclick="setSecretNumberRange('reloadGame')"" class="container__botao_azul">Jogar Novamente?</button>
                 </div>
             </div>
         </div>
