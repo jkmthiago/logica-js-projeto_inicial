@@ -71,6 +71,72 @@ body::before {
     color: #1875E8;
 }
 
+.container2 {
+    padding: 20px;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#tryhard {
+    display: flex;
+    flex-direction: column;
+    border: 2rem;
+}
+
+.container3 {
+    padding: 20px;
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container2__conteudo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container2__informacoes {
+    flex: 1;
+    padding: 20px;
+}
+
+.container2__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 16px;
+}
+
+.container2__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container2__texto-azul {
+    color: #1875E8;
+}
+
 h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 72px;

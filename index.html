@@ -13,7 +13,20 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="gameOn">
+        <div id="attempts" class="container2">
+            <p>Escolha um número entre 0 a 100</p><br>
+            <input onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text" id="attempt" style="color: black; width: 100%; border-radius: 5px; height: 30px; font-size: 23px;">
+            <button type="button" class="container2__botao" onclick="attemptDone()">Enviar</button>
+        </div>
+        <div class="container3">
+            <div id="tryHard" class="results">
+                <p id="noAttempts">Voce ainda não realizou uma tentativa. :-(</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="success" class="container" style="display: none;">
         <div class="container__conteudo">
             <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
             <div class="container__informacoes">
